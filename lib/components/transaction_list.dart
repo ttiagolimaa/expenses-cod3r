@@ -16,7 +16,7 @@ class TransactionList extends StatelessWidget {
               children: [
                 SizedBox(height: 20),
                 Text(
-                  'Nenhuma Transação Cadastrada!',
+                  'Nenhuma Transação Cadastrada!!',
                   style: Theme.of(context).textTheme.headline6,
                 ),
                 SizedBox(height: 20),
@@ -53,14 +53,14 @@ class TransactionList extends StatelessWidget {
                   trailing: MediaQuery.of(context).size.width > 480
                       ? TextButton.icon(
                           onPressed: () => deleteTransaction(tr.id),
-                          icon: Icon(Icons.delete),
-                          label: Text('Excluir'),
+                          icon: const Icon(Icons.delete),
+                          label: const Text('Excluir'),
                           style: ButtonStyle(
                             foregroundColor: MaterialStateProperty.all(
                                 Theme.of(context).errorColor),
                           ))
                       : IconButton(
-                          icon: Icon(Icons.delete),
+                          icon: const Icon(Icons.delete),
                           onPressed: () => deleteTransaction(tr.id),
                           color: Theme.of(context).errorColor,
                         ),
